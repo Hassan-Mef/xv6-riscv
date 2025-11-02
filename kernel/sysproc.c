@@ -107,3 +107,18 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_getyear(void)
+{
+    return 1975;   // or whatever year your lab expects
+}
+
+extern int readcount;   // reference the global counter
+
+uint64
+sys_getreadcount(void)
+{
+    return readcount;
+}
+
