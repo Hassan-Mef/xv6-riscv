@@ -28,7 +28,9 @@ OBJS = \
   $K/sysfile.o \
   $K/kernelvec.o \
   $K/plic.o \
-  $K/virtio_disk.o
+  $K/virtio_disk.o \
+
+
 
 # riscv64-unknown-elf- or riscv64-linux-gnu-
 # perhaps in /opt/riscv/bin
@@ -94,8 +96,9 @@ $K/%.o: $K/%.S
 
 tags: $(OBJS)
 	etags kernel/*.S kernel/*.c
+	
+ULIB = $U/ulib.o $U/usys.o $U/printf.o $U/umalloc.o $U/rand.o
 
-ULIB = $U/ulib.o $U/usys.o $U/printf.o $U/umalloc.o
 
 _%: %.o $(ULIB) $U/user.ld
 	$(LD) $(LDFLAGS) -T $U/user.ld -o $@ $< $(ULIB)
@@ -145,6 +148,9 @@ UPROGS=\
 	$U/_dorphan\
 	$U/_myprog\
 	$U/_test_syscalls\
+	$U/_settickets\
+	$U/_randtest\
+	$U/_lotterytest\
 
 
 

@@ -22,3 +22,5 @@
 #define SYS_close  21
 #define SYS_getyear 22
 #define SYS_getreadcount 23
+#define SYS_settickets 24
+

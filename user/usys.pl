@@ -44,3 +44,4 @@ entry("pause");
 entry("uptime");
 entry("getyear");
 entry("getreadcount");
+entry("settickets");

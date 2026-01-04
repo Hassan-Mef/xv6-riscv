@@ -4,6 +4,7 @@
         "param.h": "c",
         "types.h": "c",
         "defs.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "fcntl.h": "c"
     }
 }

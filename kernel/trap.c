@@ -35,7 +35,7 @@ trapinithart(void)
 // return value is user satp for trampoline.S to switch to.
 //
 uint64
-usertrap(void)
+usertrap(void)    // understand this 
 {
   int which_dev = 0;
 

@@ -26,6 +26,7 @@ int pause(int);
 int uptime(void);
 int getyear(void);
 int getreadcount(void);
+int settickets(int);
 
 
 // ulib.c

@@ -105,6 +105,8 @@ extern uint64 sys_mkdir(void);
 extern uint64 sys_close(void);
 extern uint64 sys_getyear(void);
 extern uint64 sys_getreadcount(void);
+extern uint64 sys_settickets(void);
+
 
 
 
@@ -134,6 +136,7 @@ static uint64 (*syscalls[])(void) = {
 [SYS_close]   sys_close,
 [SYS_getyear] sys_getyear,
 [SYS_getreadcount] sys_getreadcount,
+[SYS_settickets] sys_settickets,
 };
 
 void
